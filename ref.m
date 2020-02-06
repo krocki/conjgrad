@@ -8,8 +8,8 @@ function ref(M, N, fA, fB, fX, fT)
   t=toc;
 
   save ("-ascii", fA, "A");
-  save ("-ascii", fB, "x");
-  save ("-ascii", fX, "b");
+  save ("-ascii", fB, "b");
+  save ("-ascii", fX, "x");
   save ("-ascii", fT, "t");
 
 end
