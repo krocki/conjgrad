@@ -7,7 +7,7 @@ import time
 # tol - err tolerance
 # max_iter
 
-def bicg(A, b, x, tol=1e-6, max_iter=10000):
+def bicgstab(A, b, x, tol=1e-6, max_iter=10000):
 
   r = b - np.dot(A, x)   # residual
   q = b - np.dot(A.T, x) # residual
@@ -39,8 +39,8 @@ def bicg(A, b, x, tol=1e-6, max_iter=10000):
 
 if __name__ == "__main__":
 
-  A = np.random.rand(40, 40)
-  b = np.random.rand(40, 1)
+  A = np.random.rand(10, 10)
+  b = np.random.rand(10, 1)
   x0 = np.zeros((A.shape[1], 1))
 
   # apply A.T, make positive semidefinite
@@ -49,7 +49,7 @@ if __name__ == "__main__":
   b0 = np.dot(A.T, b)
 
   t0 = time.perf_counter()
-  x, r, i = bicg(A0, b0, x0)
+  x, r, i = bicgstab(A0, b0, x0)
   t1 = time.perf_counter()
 
   # verify
