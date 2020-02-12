@@ -1,12 +1,12 @@
 import numpy as np
 import time
 
-# vanilla conjugate gradient
 # Ax = b
 # x - initial solution
 # tol - err tolerance
 # max_iter
 
+# vanilla conjugate gradient
 def cg(A, b, x, tol=1e-8, max_iter=10000):
 
   r = b - np.dot(A, x) # residual
@@ -60,7 +60,6 @@ def cgs(A, b, x, tol=1e-8, max_iter=10000):
   return x, err, i
 
 # Biconjugate Gradient Stabilized (BICGSTAB)
-
 def bicgstab(A, b, x, tol=1e-8, max_iter=10000):
 
   r = b - np.dot(A, x) # residual
@@ -90,11 +89,6 @@ def bicgstab(A, b, x, tol=1e-8, max_iter=10000):
   return x, err, i
 
 # biconjugate gradient
-# Ax = b
-# x - initial solution
-# tol - err tolerance
-# max_iter
-
 def bicg(A, b, x, tol=1e-8, max_iter=10000):
 
   r = b - np.dot(A, x)   # residual
