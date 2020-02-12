@@ -127,8 +127,8 @@ def bicg(A, b, x, tol=1e-8, max_iter=10000):
 
 if __name__ == "__main__":
 
-  A = np.random.rand(50, 50)
-  b = np.random.rand(50, 1)
+  A = np.random.rand(70, 70)
+  b = np.random.rand(70, 1)
   x0 = np.zeros((A.shape[1], 1))
 
   # apply A.T, make positive semidefinite
