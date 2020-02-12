@@ -18,6 +18,7 @@ python3 conjgrad.py
 ```
 tests all of them
 
+
 [1]: https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf
 
 [2]: Fletcher, R. (1976). Watson, G. Alistair (ed.). "Conjugate gradient methods for indefinite systems
